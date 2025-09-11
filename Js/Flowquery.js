@@ -1,20 +1,10 @@
 const args = {};
 $argument.split("&").forEach(p => {
   const index = p.indexOf("=");
-  if (index > -1) {
-    const key = p.substring(0, index);
-    const value = p.substring(index + 1);
-    args[key] = decodeURIComponent(value);
-  }
+  const key = p.substring(0, index);
+  const value = p.substring(index + 1);
+  args[key] = decodeURIComponent(value);
 });
-
-function getEmoji(percent) {
-  if (percent >= 1 && percent <= 50) return "😊";
-  if (percent > 50 && percent <= 70) return "😔";
-  if (percent > 70 && percent <= 80) return "😫";
-  if (percent > 80) return "😭";
-  return "";
-}
 
 function fetchInfo(url) {
   return new Promise(resolve => {
@@ -34,11 +24,10 @@ function fetchInfo(url) {
       const used = (data.upload || 0) + (data.download || 0);
       const total = data.total || 0;
       const percent = total > 0 ? Math.round((used / total) * 100) : 0;
-      const emoji = getEmoji(percent);
 
       const lines = [
-        `已用：${percent}% ${emoji}`,
-        `流量：${(total / 1024 / 1024 / 1024).toFixed(2)} GB｜${(used / 1024 / 1024 / 1024).toFixed(2)} GB`
+        `已用：${percent}%`,
+        `流量：${(used / 1024 / 1024 / 1024).toFixed(2)} GB｜${(total / 1024 / 1024 / 1024).toFixed(2)} GB`
       ];
 
       if (data.expire) {
