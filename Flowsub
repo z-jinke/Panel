@@ -14,7 +14,7 @@ compat_arguments_desc: "本模块不需要编码订阅地址可直接使用 ABCD
 scriptings:
 - generic:
     name: 订阅面板
-    script_url: A
+    script_url: https://github.com/z-jinke/Panel/raw/refs/heads/main/Js/Flowquery.js
     arguments:
       _compat.$argument: "title1={{{备注A}}}&url1={{{地址A}}}&title2={{{备注B}}}&url2={{{地址B}}}&title3={{{备注C}}}&url3={{{地址C}}}&title4={{{备注D}}}&url4={{{地址D}}}&title5={{{备注E}}}&url5={{{地址E}}}"
 panels:
