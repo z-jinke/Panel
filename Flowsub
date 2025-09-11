@@ -10,7 +10,7 @@ compat_arguments:
   地址D: ''
   备注E: ''
   地址E: ''
-compat_arguments_desc: "本模块不需要编码订阅地址可直接使用 ABCDE代表不同订阅的地址和备注名称\n\n支持导入5个订阅显示\n支持百分比进度和Emoji表情显示"
+compat_arguments_desc: "本模块不需要编码订阅地址可直接使用 ABCDE代表不同订阅的地址和备注名称\n\n支持导入5个订阅显示\n支持百分比进度"
 scriptings:
 - generic:
     name: 订阅面板
