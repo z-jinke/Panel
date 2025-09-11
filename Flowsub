@@ -1,0 +1,21 @@
+name: 订阅流量查询
+compat_arguments:
+  备注A: ''
+  地址A: ''
+  备注B: ''
+  地址B: ''
+  备注C: ''
+  地址C: ''
+  备注D: ''
+  地址D: ''
+  备注E: ''
+  地址E: ''
+compat_arguments_desc: "本模块不需要编码订阅地址可直接使用 ABCDE代表不同订阅的地址和备注名称\n\n支持导入5个订阅显示\n支持百分比进度和Emoji表情显示"
+scriptings:
+- generic:
+    name: 订阅面板
+    script_url: A
+    arguments:
+      _compat.$argument: "title1={{{备注A}}}&url1={{{地址A}}}&title2={{{备注B}}}&url2={{{地址B}}}&title3={{{备注C}}}&url3={{{地址C}}}&title4={{{备注D}}}&url4={{{地址D}}}&title5={{{备注E}}}&url5={{{地址E}}}"
+panels:
+- name: 订阅面板
