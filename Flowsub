@@ -19,7 +19,7 @@ compat_arguments_desc: "1.本模块不需要编码订阅地址可直接使用\n2
 scriptings:
 - generic:
     name: 订阅面板
-    script_url: https://github.com/z-jinke/Config/raw/refs/heads/main/Js/Flowquery.js
+    script_url: https://github.com/z-jinke/Panel/raw/refs/heads/main/Js/Flowquery.js
     arguments:
       _compat.$argument: "title1={{{A名称}}}&url1={{{A地址}}}&resetDay1={{{A重置}}}&title2={{{B名称}}}&url2={{{B地址}}}&resetDay2={{{B重置}}}&title3={{{C名称}}}&url3={{{C地址}}}&resetDay3={{{C重置}}}&title4={{{D名称}}}&url4={{{D地址}}}&resetDay4={{{D重置}}}&title5={{{E名称}}}&url5={{{E地址}}}&resetDay5={{{E重置}}}"
 panels:
