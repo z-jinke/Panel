@@ -47,7 +47,7 @@ function fetchInfo(url, resetDay) {
 
       const lines = [
         `已用：${percent}%`,
-        `流量：${(used / 1024 / 1024 / 1024).toFixed(2)} GB｜${(total / 1024 / 1024 / 1024).toFixed(2)} GB`
+        `流量：${(used / 1024 / 1024 / 1024).toFixed(2)}GB - ${(total / 1024 / 1024 / 1024).toFixed(2)}GB`
       ];
 
       if (data.expire) {
