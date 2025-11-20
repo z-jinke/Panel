@@ -1,4 +1,5 @@
 name: 订阅流量查询
+description: 查看机场流量使用面板，自用随缘更新
 compat_arguments:
   A名称: ''
   A地址: ''
