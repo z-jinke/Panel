@@ -1,4 +1,4 @@
-// 2025.11.28 14:42
+// 2025.11.28 15:06
 
 // 处理外部参数
 const args = {};
@@ -65,11 +65,9 @@ function fetchInfo(url, resetDay) {
 
         const usedFlow = formatFlow(used);
         const totalFlow = formatFlow(total);
-        const remainFlow = formatFlow(total - used);
 
         const lines = [
-          `已用：${percent}%➟${usedFlow}`,
-          `剩余：${remainFlow}`,
+          `已用：${usedFlow}➟${percent}%`,
           `流量：${totalFlow}`
         ];
 
