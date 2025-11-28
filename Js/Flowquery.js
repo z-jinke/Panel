@@ -1,4 +1,4 @@
-// 2025.11.28 15:06
+// 2025.11.28 15:19
 
 // 处理外部参数
 const args = {};
@@ -54,8 +54,7 @@ function fetchInfo(url, resetDay) {
         const total = data.total || 0;
         const percent = total > 0 ? ((used / total) * 100).toFixed(0) : "0";
 
-        // 根据大小判断单位
-        function formatFlow(bytes) {
+        function formatUsed(bytes) {
           if (bytes >= 1024 * 1024 * 1024) {
             return (bytes / 1024 / 1024 / 1024).toFixed(2) + "GB";
           } else {
@@ -63,8 +62,16 @@ function fetchInfo(url, resetDay) {
           }
         }
 
-        const usedFlow = formatFlow(used);
-        const totalFlow = formatFlow(total);
+        function formatTotal(bytes) {
+          if (bytes >= 1024 * 1024 * 1024) {
+            return Math.floor(bytes / 1024 / 1024 / 1024) + "GB";
+          } else {
+            return Math.floor(bytes / 1024 / 1024) + "MB";
+          }
+        }
+
+        const usedFlow = formatUsed(used);
+        const totalFlow = formatTotal(total);
 
         const lines = [
           `已用：${usedFlow}➟${percent}%`,
@@ -86,7 +93,7 @@ function fetchInfo(url, resetDay) {
   });
 }
 
-// 主流程：依次处理多个订阅
+// 依次处理多个订阅
 (async () => {
   const panels = [];
 
