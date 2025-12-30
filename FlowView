@@ -5,7 +5,7 @@ compat_arguments:
   URL:
   备注:
   超时:
-compat_arguments_desc: "注意填写了很多订阅需要手动设置请求时间避免中断请求\n\n请求时间超时单位毫秒例如 5000\n不同订阅URL和备注名使用参数 @ 符号\n例如订阅 https://example.com@https://example.com\n例如备注名 订阅@订阅"
+compat_arguments_desc: "注意填写了很多订阅需要手动设置请求时间避免中断请求\n\n请求时间超时单位毫秒例如5000\n不同订阅URL和备注名使用参数@符号\n\n例如订阅 https://example.com@https://example.com\n例如备注名 订阅@订阅"
 
 scriptings:
 - generic:
