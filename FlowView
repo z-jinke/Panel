@@ -1,0 +1,18 @@
+name: 订阅查询
+description: 查看机场订阅流量内容 通过参数支持不同订阅且无限制
+
+compat_arguments:
+  URL:
+  备注:
+  超时:
+compat_arguments_desc: "注意填写了很多订阅需要手动设置请求时间避免中断请求\n\n请求时间超时单位毫秒例如 5000\n不同订阅URL和备注名使用参数 @ 符号\n例如订阅 https://example.com@https://example.com\n例如备注名 订阅@订阅"
+
+scriptings:
+- generic:
+    name: 订阅面板
+    script_url: https://github.com/z-jinke/Panel/raw/refs/heads/main/Js/Flowmon.js
+    arguments:
+      _compat.$argument: "url={{{URL}}}&title={{{备注}}}&timeout={{{超时}}}"
+
+panels:
+- name: 订阅面板
