@@ -1,5 +1,6 @@
 name: 订阅流量查询
 description: 查看机场流量使用，有增强版不限制订阅数量https://github.com/z-jinke/Panel
+
 compat_arguments:
   A名称: ''
   A地址: ''
@@ -17,6 +18,7 @@ compat_arguments:
   E地址: ''
   E重置: ''
 compat_arguments_desc: "1.本模块不需要编码订阅地址可直接使用\n2.ABCDE代表不同订阅的地址和备注名称以及流量重置日期\n\n支持导入5个订阅显示\n支持百分比进度\n支持订阅套餐重置填写重置日期"
+
 scriptings:
 - generic:
     name: 订阅面板
