@@ -1,5 +1,5 @@
 name: 订阅流量查询
-description: 查看机场流量使用面板，自用随缘更新
+description: 查看机场流量使用，有增强版不限制订阅数量https://github.com/z-jinke/Panel
 compat_arguments:
   A名称: ''
   A地址: ''
